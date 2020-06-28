@@ -1,5 +1,7 @@
 # 100DaysOfCode 👑
 
-### [#001 Calculator](challenge.amirhbeigi.ir/001)
+### 001 Calculator
 
-<a href="challenge.amirhbeigi.ir/001"><img src="https://srv-file14.gofile.io/download/wgKO65/Asset%201@3x.png" /></a>
+<a href="https://challenge.amirhbeigi.ir/001">
+  <img src="https://github.com/AmirhBeigi/100DaysOfCode/blob/master/001/calc.png?raw=true" />
+</a>
