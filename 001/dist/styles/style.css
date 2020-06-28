@@ -1,0 +1,209 @@
+@import url("https://fonts.googleapis.com/css2?family=Roboto+Mono:wght@500&display=swap");
+@media (prefers-color-scheme: dark) {
+  body {
+    background-color: #0f0f0f;
+    color: #ffffff;
+  }
+
+  #calc {
+    color: #535353;
+  }
+
+  #result {
+    color: #ffffff;
+  }
+
+  .lighten {
+    color: #ffffff5e;
+  }
+  .lighten:hover {
+    color: #ffffffb4;
+  }
+
+  .title {
+    letter-spacing: 2px;
+    font-size: 14px;
+    user-select: none;
+  }
+  .title span {
+    color: #ff3e39;
+  }
+
+  .key:hover {
+    background-color: #2F2F2F;
+    box-shadow: 0 0 0 6px rgba(255, 255, 255, 0.055);
+    transition: 0.3s;
+    flex-direction: column;
+  }
+
+  .main {
+    box-shadow: none !important;
+  }
+
+  .result {
+    background-color: #151515;
+  }
+
+  .keys {
+    background-color: #1a1a1a;
+  }
+}
+@media (prefers-color-scheme: light) {
+  body {
+    color: #1a1a1a;
+    background-color: #ebebeb;
+  }
+
+  #calc {
+    color: #a3a3a3;
+  }
+
+  #result {
+    color: #1a1a1a;
+  }
+
+  .key:hover {
+    background-color: #ebebeb;
+    box-shadow: 0 0 0 5px rgba(235, 235, 235, 0.452);
+    transition: 0.3s;
+    flex-direction: column;
+  }
+
+  .lighten {
+    color: #1a1a1a69;
+  }
+  .lighten:hover {
+    color: #1a1a1acc;
+  }
+
+  .title {
+    letter-spacing: 2px;
+    font-size: 14px;
+    color: #1a1a1a;
+    user-select: none;
+  }
+  .title span {
+    color: #ff3e39;
+  }
+
+  .result {
+    background-color: #fafafa;
+  }
+
+  .keys {
+    background-color: #ffffff;
+  }
+}
+* {
+  padding: 0;
+  margin: 0;
+  box-sizing: border-box;
+  font-family: "Roboto Mono", monospace;
+}
+
+body {
+  min-height: 100vh;
+  min-width: -webkit-fill-available;
+  background-repeat: no-repeat;
+  background-position: center;
+  background-size: cover;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+.main {
+  width: 350px;
+  border-radius: 25px;
+  box-shadow: 0 10px 40px 0 rgba(174, 174, 198, 0.171);
+  overflow: hidden;
+}
+.main .result {
+  height: 200px;
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  padding-top: 20px;
+  flex-direction: column;
+}
+.main .result div {
+  overflow: auto;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  height: 100%;
+}
+.main .result div #calc {
+  border: none;
+  width: 100%;
+  background: none;
+  font-size: 17px;
+  text-align: center;
+  margin-bottom: 10px;
+  line-break: anywhere;
+  padding: 0 20px;
+  user-select: none;
+}
+.main .result div #result {
+  border: none;
+  width: 100%;
+  background: none;
+  font-size: 40px;
+  text-align: center;
+  outline: none;
+}
+.main .keys {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  padding: 20px 0;
+}
+.main .keys .row {
+  display: flex;
+}
+.main .keys .row .key {
+  width: 60px;
+  height: 60px;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  margin: 10px 10px;
+  cursor: pointer;
+  font-size: 18px;
+  border-radius: 100px;
+  transition: 0.3s;
+  user-select: none;
+}
+.main .keys .row .key#Division {
+  color: #ff3e39;
+}
+.main .keys .row .key#multiply {
+  color: #ff3e39;
+}
+.main .keys .row .key#sum {
+  color: #ff3e39;
+}
+.main .keys .row .key#subtraction {
+  color: #ff3e39;
+}
+.main .keys .row .key#equal {
+  background-color: #ff3e39;
+  border-radius: 100px;
+  color: #ffffff;
+  box-shadow: 0 0 0 5px rgba(255, 64, 57, 0.18);
+}
+
+@media screen and (max-width: 425px) {
+  .main {
+    width: 100%;
+    border-radius: 0;
+  }
+
+  body {
+    align-items: flex-start;
+  }
+}
+
+/*# sourceMappingURL=style.css.map */

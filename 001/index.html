@@ -1,0 +1,57 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>calculator</title>
+    <link rel="stylesheet" href="dist/styles/style.css" />
+    <script src="https://kit.fontawesome.com/1e17087f17.js" crossorigin="anonymous"></script>
+  </head>
+  <body>
+    <div class="main">
+      <div class="result">
+        <span class="title">Calc<span>.</span></span>
+        <div>
+          <span name="calc" id="calc">0</span>
+          <span name="result" id="result">0</span>
+        </div>
+      </div>
+      <div class="keys">
+        <div class="row">
+          <div class="key lighten" id="clear" onclick="clearButton()">C</div>
+          <div class="key lighten" id="backspace"><i class="fas fa-backspace"></i></div>
+          <div class="key lighten" id="percentage" onclick="Numbers('/100*')">%</div>
+          <div class="key" id="Division" onclick="Numbers('/')">/</div>
+        </div>
+        <div class="row">
+          <div class="key" id="7" onclick="Numbers('7')">7</div>
+          <div class="key" id="8" onclick="Numbers('8')">8</div>
+          <div class="key" id="9" onclick="Numbers('9')">9</div>
+          <div class="key" id="multiply" onclick="Numbers('*')">*</div>
+        </div>
+        <div class="row">
+          <div class="key" id="4" onclick="Numbers('4')">4</div>
+          <div class="key" id="5" onclick="Numbers('5')">5</div>
+          <div class="key" id="6" onclick="Numbers('6')">6</div>
+          <div class="key" id="sum" onclick="Numbers('+')">+</div>
+        </div>
+        <div class="row">
+          <div class="key" id="1" onclick="Numbers('1')">1</div>
+          <div class="key" id="2" onclick="Numbers('2')">2</div>
+          <div class="key" id="3" onclick="Numbers('3')">3</div>
+          <div class="key" id="subtraction" onclick="Numbers('-')">-</div>
+        </div>
+        <div class="row">
+          <div class="key lighten" id="zeroZero" onclick="Numbers('00')">00</div>
+          <div class="key" id="0" onclick="Numbers('0')">0</div>
+          <div class="key lighten" id="point" onclick="Numbers('.')">.</div>
+          <div class="key" id="equal" onclick="calc()">
+            =
+          </div>
+        </div>
+      </div>
+    </div>
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.5.1/jquery.min.js"></script>
+    <script src="/001/dist/js/main.js"></script>
+  </body>
+</html>

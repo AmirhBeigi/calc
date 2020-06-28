@@ -1,0 +1,249 @@
+@import url("https://fonts.googleapis.com/css2?family=Roboto+Mono:wght@500&display=swap");
+
+$primery: #ff3e39;
+
+$bg--dark: #0f0f0f;
+$color--dark: #ffffff;
+$bgKeys--dark: #1a1a1a;
+$bgResult--dark: #151515;
+
+$bg--light: #ebebeb;
+$color--light: #1a1a1a;
+$bgKeys--light: #ffffff;
+$bgResult--light: #fafafa;
+
+
+
+@media (prefers-color-scheme: dark) {
+    body {
+        background-color: $bg--dark;
+        color: $color--dark;
+    }
+
+    #calc {
+        color: #535353;
+    }
+
+    #result {
+        color: #ffffff;
+    }
+
+    .lighten {
+        color: #ffffff5e;
+
+        &:hover {
+            color: #ffffffb4;
+
+        }
+    }
+
+    .title {
+        letter-spacing: 2px;
+        font-size: 14px;
+        user-select: none;
+
+        span {
+            color: $primery;
+        }
+    }
+
+    .key:hover {
+        background-color: #2F2F2F;
+        box-shadow: 0 0 0 6px rgba(255, 255, 255, 0.055);
+        transition: 0.3s;
+        flex-direction: column;
+    }
+
+    .main {
+        box-shadow: none !important;
+    }
+
+    .result {
+        background-color: $bgResult--dark;
+    }
+
+    .keys {
+        background-color: $bgKeys--dark;
+    }
+}
+
+@media (prefers-color-scheme: light) {
+    $color: $color--light;
+
+    body {
+        color: $color--light;
+        background-color: $bg--light;
+    }
+
+    #calc {
+        color: #a3a3a3;
+    }
+
+    #result {
+        color: $color--light;
+    }
+
+    .key:hover {
+        background-color: #ebebeb;
+        box-shadow: 0 0 0 5px rgba(235, 235, 235, 0.452);
+        transition: 0.3s;
+        flex-direction: column;
+    }
+
+    .lighten {
+        color: #1a1a1a69;
+
+        &:hover {
+            color: #1a1a1acc;
+        }
+    }
+
+    .title {
+        letter-spacing: 2px;
+        font-size: 14px;
+        color: #1a1a1a;
+        user-select: none;
+
+        span {
+            color: $primery;
+        }
+    }
+
+    .result {
+        background-color: $bgResult--light;
+    }
+
+    .keys {
+        background-color: $bgKeys--light;
+    }
+}
+
+* {
+    padding: 0;
+    margin: 0;
+    box-sizing: border-box;
+    font-family: "Roboto Mono", monospace;
+
+}
+
+body {
+    min-height: 100vh;
+    min-width: -webkit-fill-available;
+    background-repeat: no-repeat;
+    background-position: center;
+    background-size: cover;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+.main {
+    width: 350px;
+    border-radius: 25px;
+    box-shadow: 0 10px 40px 0 rgba(174, 174, 198, 0.171);
+    overflow: hidden;
+
+
+    .result {
+        height: 200px;
+        display: flex;
+        align-items: center;
+        justify-content: space-between;
+        padding-top: 20px;
+        flex-direction: column;
+
+        div {
+            overflow: auto;
+            display: flex;
+            flex-direction: column;
+            align-items: center;
+            justify-content: center;
+            height: 100%;
+
+            #calc {
+                border: none;
+                width: 100%;
+                background: none;
+                font-size: 17px;
+                text-align: center;
+                margin-bottom: 10px;
+
+                line-break: anywhere;
+                padding: 0 20px;
+
+                user-select: none;
+            }
+
+
+            #result {
+                border: none;
+                width: 100%;
+                background: none;
+                font-size: 40px;
+                text-align: center;
+                outline: none;
+            }
+        }
+    }
+
+    .keys {
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+        justify-content: center;
+        padding: 20px 0;
+
+        .row {
+            display: flex;
+
+            .key {
+                width: 60px;
+                height: 60px;
+                display: flex;
+                justify-content: center;
+                align-items: center;
+                margin: 10px 10px;
+                cursor: pointer;
+                font-size: 18px;
+                border-radius: 100px;
+                transition: 0.3s;
+                user-select: none;
+
+
+                &#Division {
+                    color: $primery;
+                }
+
+                &#multiply {
+                    color: $primery;
+                }
+
+                &#sum {
+                    color: $primery;
+                }
+
+                &#subtraction {
+                    color: $primery;
+                }
+
+                &#equal {
+                    background-color: #ff3e39;
+                    border-radius: 100px;
+                    color: #ffffff;
+                    box-shadow: 0 0 0 5px rgb(255 64 57 / 18%);
+                }
+            }
+        }
+    }
+}
+
+@media screen and (max-width:425px) {
+    .main {
+        width: 100%;
+        border-radius: 0;
+    }
+
+    body {
+        align-items: flex-start;
+    }
+}
