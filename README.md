@@ -3,6 +3,6 @@
 > )
 
 <a href="https://challenge.amirhbeigi.ir/001">
-  <img src="https://github.com/AmirhBeigi/100DaysOfCode/blob/master/001/calc.png?raw=true" />
+  <img src="https://github.com/AmirhBeigi/100DaysOfCode/blob/master/calc.png?raw=true" />
 </a>
 
